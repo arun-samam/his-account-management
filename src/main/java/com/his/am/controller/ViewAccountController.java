@@ -29,10 +29,13 @@ public class ViewAccountController {
 		if("admin".equalsIgnoreCase(viewrole)) {
 			//get List of Admin from service
 			model.addAttribute("modellist", service.getAdminList());
+			model.addAttribute("tablename", "Admin Table");
 		}else if("caseworker".equalsIgnoreCase(viewrole)) {
 			//get List of caseworker from service
 			model.addAttribute("modellist", service.getCaseWorkderList());
-		}
+			model.addAttribute("tablename", "CaseWorkers Table");
+		}else
+			return "viewaccounts";
 		return "viewaccounts";
 	}
 }

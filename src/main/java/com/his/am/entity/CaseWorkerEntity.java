@@ -1,5 +1,6 @@
 package com.his.am.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -19,4 +20,6 @@ public class CaseWorkerEntity extends DateAudit{
 	private String lastName;
 	private String gender;
 	
+	@Column(name = "ACTIVE_SWICH")
+	private Boolean isActive;
 }
